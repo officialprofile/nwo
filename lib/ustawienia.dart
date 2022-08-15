@@ -10,6 +10,6 @@ class Ustawienia extends StatefulWidget {
 class _UstawieniaState extends State<Ustawienia> {
   @override
   Widget build(BuildContext context) {
-    return Text('ustawienia');
+    return const Text('ustawienia');
   }
 }

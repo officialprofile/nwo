@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
-class Slownik extends StatefulWidget {
-  Slownik({Key? key}) : super(key: key);
+const int itemCount = 30;
+const isFav = <bool>[true, false];
 
-  @override
-  _SlownikState createState() => _SlownikState();
-}
+class Slownik extends StatelessWidget {
+  const Slownik({Key? key}) : super(key: key);
 
-class _SlownikState extends State<Slownik> {
   @override
   Widget build(BuildContext context) {
-    return Text('slownik');
+    return ListView.builder(
+        itemCount: itemCount,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            title: Text('Słowo numer ${(index + 1)}'),
+            trailing: const Icon(Icons.favorite_sharp),
+            // : const Icon(Icons.favorite_border_sharp),
+          );
+        });
   }
 }

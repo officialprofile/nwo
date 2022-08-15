@@ -10,6 +10,6 @@ class Nauka extends StatefulWidget {
 class _NaukaState extends State<Nauka> {
   @override
   Widget build(BuildContext context) {
-    return Text('nauka');
+    return const Text('nauka');
   }
 }

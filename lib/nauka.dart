@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
+
+List names = ['jeden', 'dwa', 'trzy'];
 
 class Nauka extends StatefulWidget {
   Nauka({Key? key}) : super(key: key);
@@ -10,6 +13,7 @@ class Nauka extends StatefulWidget {
 class _NaukaState extends State<Nauka> {
   @override
   Widget build(BuildContext context) {
-    return const Text('nauka');
+    final _random = new Random();
+    return Text(names[_random.nextInt(names.length)]);
   }
 }
